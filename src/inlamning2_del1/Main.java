@@ -1,25 +1,25 @@
 package inlamning2_del1;
 
+import inlamning2_del1.GuitarStore.Guitar;
 import inlamning2_del1.GuitarStore.GuitarFactory;
 import inlamning2_del1.GuitarStore.GuitarStore;
 
 public class Main {
-    
-    
+
     public static void main(String[] args) {
-           
+        
         /*
             En GuitarBuilder som tar in valfritt antal parametrar
             T.om. en helt specifikationslös gitarr. En luftgitarr.
         */
         
         GuitarBuilder airGuitar = new GuitarBuilder.Builder().build();
-        GuitarBuilder Ibanez = new GuitarBuilder.Builder().brand("Ibanez").build();
-        GuitarBuilder FenderStarCaster = new GuitarBuilder.Builder().brand("Fender").model("Starcaster").build();
-        GuitarBuilder GibsonLesPaul = new GuitarBuilder.Builder().brand("Gibson").model("Les Paul").amountOfStrings(6).build();
+        GuitarBuilder ibanez = new GuitarBuilder.Builder().brand("Ibanez").build();
+        GuitarBuilder fenderStarCaster = new GuitarBuilder.Builder().brand("Fender").model("Starcaster").build();
+        GuitarBuilder gibsonLesPaul = new GuitarBuilder.Builder().brand("Gibson").model("Les Paul").amountOfStrings(6).build();
 
         /*
-            En gitarrsolo-factory.
+            En gitarrsolo-factory som implementerar ett ISolo interface.
         */
 
         SoloFactory soloFactory = new SoloFactory();
@@ -33,12 +33,14 @@ public class Main {
         solo3.playSolo();
         
         /*
-            En gitarrbutiksom även som bygger nya gitarrer.
+            En gitarrbutik som även som bygger nya gitarrer. Även den implementerar ISolo för att kunna spela solon.
         */
         
         GuitarStore guitarStore = new GuitarStore(new GuitarFactory());
-        guitarStore.createGuitar("Washburn");
-        guitarStore.createGuitar("Martin");
+        Guitar washburn = guitarStore.createGuitar("Washburn");
+        Guitar martin = guitarStore.createGuitar("Martin");
 
+        washburn.playSolo();
+        martin.playSolo();
     }
 }

@@ -1,13 +1,11 @@
 package inlamning2_del1.GuitarStore;
 
-import inlamning2_del1.LesPaul;
-
+import guitars.*;
 
 public class GuitarFactory {    
+    Guitar guitar = null;
     
-    public Guitar makeGuitar(String brand) {
-        
-        Guitar guitar = null;
+    public Guitar makeGuitar(String brand) {    
         
         switch (brand) {
             case "Washburn":
@@ -16,9 +14,8 @@ public class GuitarFactory {
             case "Martin":
                 guitar = new Martin();
                 return guitar;
+            default:
+                return null;
         }
-        
-        return null;
     }
-    
 }

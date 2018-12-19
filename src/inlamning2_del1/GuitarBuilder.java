@@ -11,11 +11,11 @@ package inlamning2_del1;
 */
 
 public class GuitarBuilder {
-
-    private String brand;
-    private String model;
-    private int amountOfStrings;
     
+        private String brand;
+        private String model; 
+        private int amountOfStrings;
+
     public static class Builder {
         
         private String brand = "";
@@ -38,14 +38,14 @@ public class GuitarBuilder {
         }
         
         public GuitarBuilder build() {
-            return new GuitarBuilder(this);
-        }   
-    }
-    
-    private GuitarBuilder(Builder builder) {
-        brand = builder.brand;
-        model = builder.model;
-        amountOfStrings = builder.amountOfStrings;
+        
+        GuitarBuilder guitar = new GuitarBuilder();
+        guitar.brand = this.brand;
+        guitar.model = this.model;
+        guitar.amountOfStrings = this.amountOfStrings;
+        
+        return guitar;
+        }
     }
 
     public String getModel() {
@@ -58,5 +58,6 @@ public class GuitarBuilder {
 
     public int getAmountOfStrings() {
         return amountOfStrings;
-    }    
+    }  
+    
 }

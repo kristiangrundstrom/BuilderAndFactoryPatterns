@@ -1,4 +1,6 @@
-package inlamning2_del1;
+package guitars;
+
+import inlamning2_del1.ISolo;
 
 public class LesPaul implements ISolo {
     

@@ -1,6 +1,8 @@
-package inlamning2_del1;
+package guitars;
 
-public class Starcaster implements ISolo {
+import inlamning2_del1.ISolo;
+
+public class Fender implements ISolo {
     
     @Override
     public void playSolo() {
