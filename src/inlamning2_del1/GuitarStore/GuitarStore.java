@@ -12,8 +12,5 @@ public class GuitarStore {
         Guitar guitar = guitarFactory.makeGuitar(guitarBrand);
         
         return guitar;
-    }
-    
-    
-    
+    }   
 }

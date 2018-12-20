@@ -1,4 +1,4 @@
-package guitars;
+package inlamning2_del1.Guitars;
 
 import inlamning2_del1.GuitarStore.Guitar;
 import inlamning2_del1.ISolo;
@@ -15,7 +15,15 @@ public class Ibanez extends Guitar implements ISolo {
     
     @Override
     public void playSolo() {
-        System.out.println("Heavy metal solo on a burning guitar going on!");
+        System.out.println("Heavy metal solo on a burning Ibanez going on!");
     }
-    
+
+    @Override
+    public String getColor() {
+        return color;
+    }
+
+    public int getAmountOfStrings() {
+        return amountOfStrings;
+    }
 }

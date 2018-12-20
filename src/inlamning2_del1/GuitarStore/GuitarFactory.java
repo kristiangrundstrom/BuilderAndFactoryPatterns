@@ -1,6 +1,7 @@
 package inlamning2_del1.GuitarStore;
 
-import guitars.*;
+import inlamning2_del1.Guitars.Martin;
+import inlamning2_del1.Guitars.Washburn;
 
 public class GuitarFactory {    
     

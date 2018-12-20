@@ -1,4 +1,4 @@
-package guitars;
+package inlamning2_del1.Guitars;
 
 import inlamning2_del1.GuitarStore.Guitar;
 import inlamning2_del1.ISolo;
@@ -13,7 +13,7 @@ public class Fender extends Guitar implements ISolo {
     }
     @Override
     public void playSolo() {
-        System.out.println("Funky soloing going on here!");
+        System.out.println("Funky Fender soloing going on here!");
     }
     
 }

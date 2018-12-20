@@ -1,4 +1,4 @@
-package guitars;
+package inlamning2_del1.Guitars;
 
 import inlamning2_del1.GuitarStore.Guitar;
 import inlamning2_del1.ISolo;

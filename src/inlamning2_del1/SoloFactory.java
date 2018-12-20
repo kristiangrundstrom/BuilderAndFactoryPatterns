@@ -1,20 +1,26 @@
 package inlamning2_del1;
 
-import guitars.*;
+import inlamning2_del1.GuitarStore.Guitar;
+import inlamning2_del1.Guitars.*;
 
 public class SoloFactory {
     
     public ISolo getGuitarModel(String guitarModel, String color, int amountOfStrings) {
         
+        Guitar guitar = null;
+        
         switch (guitarModel) {
             case "Les Paul":
-                return new LesPaul(color,amountOfStrings);
+                guitar = new LesPaul(color,amountOfStrings);
+                return guitar;
             case "Starcaster":
-                return new Fender(color,amountOfStrings);
+                guitar = new Fender(color,amountOfStrings);
+                return guitar;
             case "Xv500":
-                return new Ibanez(color,amountOfStrings);
+                guitar = new Ibanez(color,amountOfStrings);
+                return guitar;
         }
 
         return null;
-    }
+    }    
 }
