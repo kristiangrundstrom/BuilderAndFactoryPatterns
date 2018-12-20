@@ -13,14 +13,21 @@ package inlamning2_del1;
 public class GuitarBuilder {
     
         private String brand;
-        private String model; 
+        private String model;
+        private String color;
         private int amountOfStrings;
 
     public static class Builder {
         
-        private String brand = "";
-        private String model = ""; 
-        private int amountOfStrings = 0;
+        private String brand;
+        private String model;
+        private String color;
+        private int amountOfStrings;
+        
+        public Builder color(String color) {
+            this.color = color;
+            return this;
+        }
         
         public Builder brand(String brand) {
             this.brand = brand;
@@ -39,12 +46,13 @@ public class GuitarBuilder {
         
         public GuitarBuilder build() {
         
-        GuitarBuilder guitar = new GuitarBuilder();
-        guitar.brand = this.brand;
-        guitar.model = this.model;
-        guitar.amountOfStrings = this.amountOfStrings;
-        
-        return guitar;
+            GuitarBuilder guitar = new GuitarBuilder();
+            guitar.brand = this.brand;
+            guitar.model = this.model;
+            guitar.color = this.color;
+            guitar.amountOfStrings = this.amountOfStrings;
+
+            return guitar;
         }
     }
 

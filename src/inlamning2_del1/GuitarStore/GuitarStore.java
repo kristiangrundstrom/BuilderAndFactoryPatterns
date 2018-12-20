@@ -9,7 +9,7 @@ public class GuitarStore {
     }
     
     public Guitar createGuitar(String guitarBrand) {
-        Guitar guitar = new GuitarFactory().makeGuitar(guitarBrand);
+        Guitar guitar = guitarFactory.makeGuitar(guitarBrand);
         
         return guitar;
     }

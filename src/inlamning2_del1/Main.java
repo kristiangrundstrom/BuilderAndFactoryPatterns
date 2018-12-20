@@ -19,21 +19,21 @@ public class Main {
         GuitarBuilder gibsonLesPaul = new GuitarBuilder.Builder().brand("Gibson").model("Les Paul").amountOfStrings(6).build();
 
         /*
-            En gitarrsolo-factory som implementerar ett ISolo interface.
+            En enklare gitarrsolo-factory som implementerar ett ISolo interface så varje gitar kan dra av ett solo.
         */
 
         SoloFactory soloFactory = new SoloFactory();
         
-        ISolo solo1 = soloFactory.getGuitarModel("Les Paul");
-        ISolo solo2 = soloFactory.getGuitarModel("Starcaster");
-        ISolo solo3 = soloFactory.getGuitarModel("Xv500");
+        ISolo LP = soloFactory.getGuitarModel("Les Paul","White",6);
+        ISolo Starcaster = soloFactory.getGuitarModel("Starcaster","Pearl White",6);
+        ISolo XV500 = soloFactory.getGuitarModel("Xv500","Blue",6);
         
-        solo1.playSolo();
-        solo2.playSolo();
-        solo3.playSolo();
+        LP.playSolo();
+        Starcaster.playSolo();
+        XV500.playSolo();
         
         /*
-            En gitarrbutik som även som bygger nya gitarrer. Även den implementerar ISolo för att kunna spela solon.
+            En gitarrbutik som även bygger gitarrer. ISolo är implementerat även här för gitarrsolon.
         */
         
         GuitarStore guitarStore = new GuitarStore(new GuitarFactory());

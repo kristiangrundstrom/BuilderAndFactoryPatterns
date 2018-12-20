@@ -4,19 +4,15 @@ import guitars.*;
 
 public class SoloFactory {
     
-    public ISolo getGuitarModel(String guitarModel) {
+    public ISolo getGuitarModel(String guitarModel, String color, int amountOfStrings) {
         
         switch (guitarModel) {
             case "Les Paul":
-                return new LesPaul();
+                return new LesPaul(color,amountOfStrings);
             case "Starcaster":
-                return new Fender();
+                return new Fender(color,amountOfStrings);
             case "Xv500":
-                return new Ibanez();
-            case "Martin":
-                return new Martin();
-            case "Washburn":
-                return new Washburn();
+                return new Ibanez(color,amountOfStrings);
         }
 
         return null;
