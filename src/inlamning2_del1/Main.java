@@ -13,15 +13,17 @@ public class Main {
             T.om. en helt specifikationslös gitarr. En luftgitarr.
         */
         
-        GuitarBuilder airGuitar = new GuitarBuilder.Builder().build();
-        GuitarBuilder ibanez = new GuitarBuilder.Builder().brand("Ibanez").color("Green").build();
-        GuitarBuilder fenderStarCaster = new GuitarBuilder.Builder().brand("Fender").model("Starcaster").color("Pearl White").build();
-        GuitarBuilder gibsonLesPaul = new GuitarBuilder.Builder().brand("Gibson").model("Les Paul").color("Cherry Sunburst").amountOfStrings(6).build();
+        GuitarBuilder airGuitar = new GuitarBuilder.Builder().pickguard("transparent").build();
+        GuitarBuilder ibanez = new GuitarBuilder.Builder().brand("Ibanez").color("green").pickguard("red").build();
+        GuitarBuilder fenderStarCaster = new GuitarBuilder.Builder().brand("Fender").model("Starcaster").color("Pearl White").pickups("single coil").build();
+        GuitarBuilder gibsonLesPaul = new GuitarBuilder.Builder().brand("Gibson").model("Les Paul").color("cherry Sunburst").pickguard("black").pickups("humbuckers").amountOfStrings(6).build();
 
         // Gitarrerna ihopsatta.
+        System.out.println("The airguitar's pickguard is: " + airGuitar.getPickguard());
         System.out.println(ibanez.getBrand() + " is " + ibanez.getColor() + ".");
         System.out.println(fenderStarCaster.getBrand() + " is a " + fenderStarCaster.getModel() + " and is in " + fenderStarCaster.getColor() + ".");
-        System.out.println(gibsonLesPaul.getBrand() + " " + gibsonLesPaul.getModel() + " has " + gibsonLesPaul.getAmountOfStrings() + " strings" + ".");
+        System.out.println(gibsonLesPaul.getBrand() + " " + gibsonLesPaul.getModel() + " has " + gibsonLesPaul.getAmountOfStrings() + " strings" + " and "+
+                "the " + gibsonLesPaul.getPickups() + " are just below the " + gibsonLesPaul.getPickguard() + " pickguard.");
         
         System.out.println("");
         
@@ -46,7 +48,12 @@ public class Main {
         GuitarStore guitarStore = new GuitarStore(new GuitarFactory());
         Guitar washburn = guitarStore.createGuitar("Washburn");
         Guitar martin = guitarStore.createGuitar("Martin");
-
+        System.out.println("");
+        
+        System.out.println("The Washburn guitar is: " + washburn.getColor());
+        System.out.println("The Martin guitar is: " + martin.getColor());
+        System.out.println("");
+        
         washburn.playSolo();
         martin.playSolo();
     }

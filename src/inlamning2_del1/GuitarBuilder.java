@@ -15,6 +15,8 @@ public class GuitarBuilder {
         private String brand;
         private String model;
         private String color;
+        private String pickguard;
+        private String pickups;
         private int amountOfStrings;
 
     public static class Builder {
@@ -22,6 +24,8 @@ public class GuitarBuilder {
         private String brand;
         private String model;
         private String color;
+        private String pickguard;
+        private String pickups;
         private int amountOfStrings;
         
         public Builder color(String color) {
@@ -44,12 +48,24 @@ public class GuitarBuilder {
             return this;
         }
         
+        public Builder pickguard(String pickguard) {
+            this.pickguard = pickguard;
+            return this;
+        }
+        
+        public Builder pickups(String pickups) {
+            this.pickups = pickups;
+            return this;
+        }
+        
         public GuitarBuilder build() {
         
             GuitarBuilder guitar = new GuitarBuilder();
             guitar.brand = this.brand;
             guitar.model = this.model;
             guitar.color = this.color;
+            guitar.pickguard = this.pickguard;
+            guitar.pickups = this.pickups;
             guitar.amountOfStrings = this.amountOfStrings;
 
             return guitar;
@@ -70,5 +86,13 @@ public class GuitarBuilder {
 
     public String getColor() {
         return color;
-    }    
+    }
+
+    public String getPickguard() {
+        return pickguard;
+    }
+
+    public String getPickups() {
+        return pickups;
+    }
 }
