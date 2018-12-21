@@ -1,5 +1,8 @@
 package inlamning2_del2;
 
+import java.util.List;
+import javafx.util.Pair;
+
 public class Main {
     
     public Main() {
@@ -59,7 +62,7 @@ public class Main {
         
         
         // Vilket program en Coordinator ansvarar för?
-            System.out.println("Vilket program en Coordinator ansvarar för?\n---------------------------");
+            System.out.println("Vilket program en Coordinator ansvarar för?\n----------------------");
             System.out.println(coordinator1.getName() + " ansvarar för " + coordinator1.getProgram().getName());
             System.out.println(coordinator2.getName() + " ansvarar för " + coordinator2.getProgram().getName());
             System.out.println("");
@@ -67,7 +70,7 @@ public class Main {
             
             
         // Vilka lärare som finns för ett Program?
-            System.out.println("Vilka lärare som finns för ett Program?\n------------------------");
+            System.out.println("Vilka lärare som finns för ett Program?\n---------------------");
             for (Teacher t : coordinator1.getTeacherList()) {
                 System.out.println("Teacher " + t.getName() + " undervisar i " + coordinator1.getProgram().getName());
             }
@@ -85,7 +88,7 @@ public class Main {
         
                 
         // Vilka ämnen som undervisats i ett Seminar?
-            System.out.println("Vilka ämnen som undervisats i ett Seminar?\n--------------------------");
+            System.out.println("Vilka ämnen som undervisats i ett Seminar?\n------------------");
             System.out.println("Alla ämnen i " + seminar1.getName());
             for (Subject e: seminar1.getSubjects()) {
                 System.out.println(e.getName() + " : " + e.viewSubjectInfo());
@@ -114,13 +117,14 @@ public class Main {
             attendance.registerAttendance(seminar1, studentErica);
             attendance.registerAttendance(seminar2, studentErica);
 
-            attendance.registerAttendance(seminar1, studentFranz);
             attendance.registerAttendance(seminar2, studentFranz);
             attendance.registerAttendance(seminar3, studentFranz);
+            
+            attendance.registerAttendance(seminar4, studentFranz);
         
 
         // Vad närvaron är för Student X?
-            System.out.println("Vad närvaron är för Student X?\n-----------------------");
+            System.out.println("Vad närvaron är för Student X?\n--------------------");
             System.out.println("Närvaron för Johan är: ");
             for (Seminar e : studentJohan.getSeminarsAttended()) {
                 System.out.println(e.getName());
@@ -162,7 +166,7 @@ public class Main {
 
   
         // Hur många studenter som finns i ett Program?
-        System.out.println("Hur många studenter som finns i ett Program?\n-------------------------");
+        System.out.println("Hur många studenter som finns i ett Program?\n---------------------");
             System.out.println("Hur många studenter finns det i Program 1?");
 
             for (Student e: program1.getStudents()) {
@@ -204,6 +208,15 @@ public class Main {
             
             System.out.println("Senaste seminariet Urban höll");
             System.out.println(teacherUrban.getCurrentSeminar().getName());
+            System.out.println("");
+            
+            
+//            Närvaron för Seminar X?
+             System.out.println("Närvaron för Seminar X? (" + seminar3.getName() + ")");
+             System.out.println("----------------------");
+             for (Pair<Attendance,Student> e : seminar3.getTotalAttendance()) {
+                 System.out.println(e.getValue().getName());
+             }
     }
 
     public static void main(String[] args) {

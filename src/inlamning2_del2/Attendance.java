@@ -11,6 +11,7 @@ public class Attendance {
     public void registerAttendance(Seminar seminar, Student student) {
         attendanceLevel.add(new Pair(seminar, student));
         student.attendSeminar(seminar);
+        seminar.addAttendance(this, student);
     }
 
     public void removeAttendance(Seminar seminar, Student student) {
