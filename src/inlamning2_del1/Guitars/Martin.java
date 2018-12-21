@@ -8,7 +8,6 @@ public class Martin extends Guitar implements ISolo {
     private String color = "black";
     private int amountOfStrings = 6;
     
-
     @Override
     public String getColor() {
         return color;
