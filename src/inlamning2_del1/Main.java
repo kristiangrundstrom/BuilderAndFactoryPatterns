@@ -50,8 +50,8 @@ public class Main {
         Guitar martin = guitarStore.createGuitar("Martin");
         System.out.println("");
         
-        System.out.println("The Washburn guitar is: " + washburn.getColor());
-        System.out.println("The Martin guitar is: " + martin.getColor());
+        System.out.println("The Washburn guitar is: " + washburn.getColor() + " with a " + washburn.getPickguard() + " pickguard and " + washburn.getPickups() + " pickups.");
+        System.out.println("The Martin guitar is: " + martin.getColor() + " with " + martin.getAmountOfStrings() + " strings and " + martin.getPickguard() + " pickguard.");
         System.out.println("");
         
         washburn.playSolo();

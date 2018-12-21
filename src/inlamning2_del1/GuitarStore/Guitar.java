@@ -6,15 +6,23 @@ public class Guitar implements ISolo {
     
     private String color;
     private int amountOfStrings;
-    
-    @Override
-        public String getColor() {
+    private String pickguard;
+    private String pickups;
+       
+    public String getColor() {
         return color;
     }
-    
-    @Override
-        public int getAmountOfStrings() {
+
+    public int getAmountOfStrings() {
         return amountOfStrings;
+    }
+
+    public String getPickguard() {
+        return pickguard;
+    }
+
+    public String getPickups() {
+        return pickups;
     }
     
     @Override
