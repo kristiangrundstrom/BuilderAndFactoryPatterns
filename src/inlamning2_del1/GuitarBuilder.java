@@ -66,6 +66,9 @@ public class GuitarBuilder {
 
     public int getAmountOfStrings() {
         return amountOfStrings;
-    }  
-    
+    }
+
+    public String getColor() {
+        return color;
+    }    
 }

@@ -14,10 +14,15 @@ public class Main {
         */
         
         GuitarBuilder airGuitar = new GuitarBuilder.Builder().build();
-        GuitarBuilder ibanez = new GuitarBuilder.Builder().brand("Ibanez").build();
-        GuitarBuilder fenderStarCaster = new GuitarBuilder.Builder().brand("Fender").model("Starcaster").build();
-        GuitarBuilder gibsonLesPaul = new GuitarBuilder.Builder().brand("Gibson").model("Les Paul").amountOfStrings(6).build();
+        GuitarBuilder ibanez = new GuitarBuilder.Builder().brand("Ibanez").color("Green").build();
+        GuitarBuilder fenderStarCaster = new GuitarBuilder.Builder().brand("Fender").model("Starcaster").color("Pearl White").build();
+        GuitarBuilder gibsonLesPaul = new GuitarBuilder.Builder().brand("Gibson").model("Les Paul").color("Cherry Sunburst").amountOfStrings(6).build();
 
+        // Gitarrerna ihopsatta.
+        System.out.println(ibanez.getBrand() + " is " + ibanez.getColor());
+        System.out.println(gibsonLesPaul.getBrand() + " has " + gibsonLesPaul.getAmountOfStrings() + " strings");
+        System.out.println("");
+        
         /*
             En enklare gitarrsolo-factory som implementerar ett ISolo interface så varje gitar kan dra av ett solo.
         */
