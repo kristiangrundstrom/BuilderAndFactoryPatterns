@@ -1,6 +1,5 @@
 package inlamning2_del2;
 
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -10,7 +9,6 @@ public class Program {
     private final String name;
     private List<Seminar> seminars = new LinkedList<>();
     private List<Student> students = new LinkedList();
-    
     
     public Program(String name) {
         this.name = name;

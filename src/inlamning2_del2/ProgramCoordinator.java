@@ -32,7 +32,7 @@ public class ProgramCoordinator {
         for (Teacher t : getTeacherList()) {
                 System.out.println("Teacher " + t.getName() + " undervisar i " + getProgram().getName());
             }
-        
+
         return null;
     }
 
@@ -47,5 +47,4 @@ public class ProgramCoordinator {
     List<Teacher> getTeacherList() {
         return teacherList;
     }
-    
 }

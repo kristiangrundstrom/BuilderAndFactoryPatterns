@@ -1,6 +1,5 @@
 package inlamning2_del2;
 
-
 public class Subject {
     private String name;
     private String info;

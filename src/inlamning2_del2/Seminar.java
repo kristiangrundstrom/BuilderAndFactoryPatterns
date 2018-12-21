@@ -5,7 +5,6 @@ import java.util.LinkedList;
 import java.util.List;
 import javafx.util.Pair;
 
-
 public class Seminar {
     private String name;
     private List<Subject> subjects = new LinkedList<>();
