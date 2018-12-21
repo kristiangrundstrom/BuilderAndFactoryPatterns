@@ -19,8 +19,10 @@ public class Main {
         GuitarBuilder gibsonLesPaul = new GuitarBuilder.Builder().brand("Gibson").model("Les Paul").color("Cherry Sunburst").amountOfStrings(6).build();
 
         // Gitarrerna ihopsatta.
-        System.out.println(ibanez.getBrand() + " is " + ibanez.getColor());
-        System.out.println(gibsonLesPaul.getBrand() + " has " + gibsonLesPaul.getAmountOfStrings() + " strings");
+        System.out.println(ibanez.getBrand() + " is " + ibanez.getColor() + ".");
+        System.out.println(fenderStarCaster.getBrand() + " is a " + fenderStarCaster.getModel() + " and is in " + fenderStarCaster.getColor() + ".");
+        System.out.println(gibsonLesPaul.getBrand() + " " + gibsonLesPaul.getModel() + " has " + gibsonLesPaul.getAmountOfStrings() + " strings" + ".");
+        
         System.out.println("");
         
         /*
