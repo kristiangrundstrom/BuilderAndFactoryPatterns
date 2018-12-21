@@ -27,10 +27,12 @@ public class ProgramCoordinator {
         teacher.setCurrentSeminar(program.getSeminars().get(lastIndex));
     }
     
-    public String findTeacher(String teacher) {
+    public Teacher findTeacher(String teacher) {
         
-        for (Teacher t : getTeacherList()) {
-                System.out.println("Teacher " + t.getName() + " undervisar i " + getProgram().getName());
+        for (Teacher t : teacherList) {
+                if (t.getName().equals(teacher)) {
+                    return t;
+                }
             }
 
         return null;

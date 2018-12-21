@@ -14,7 +14,7 @@ public class Program {
         this.name = name;
     }
 
-    public void setStudents(Student student) {
+    public void addStudent(Student student) {
         students.add(student);
     }
     

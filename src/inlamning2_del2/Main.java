@@ -150,12 +150,12 @@ public class Main {
   
         
         // Hur man lägger till en ny student till ett Program? 
-            program1.setStudents(studentFranz);
-            program1.setStudents(studentErica);
-            program2.setStudents(studentErica);
-            program2.setStudents(studentJohan);
-            program3.setStudents(studentErica);
-            program3.setStudents(studentFranz);
+            program1.addStudent(studentFranz);
+            program1.addStudent(studentErica);
+            program2.addStudent(studentErica);
+            program2.addStudent(studentJohan);
+            program3.addStudent(studentErica);
+            program3.addStudent(studentFranz);
             
             
             
