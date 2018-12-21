@@ -1,6 +1,5 @@
 package inlamning2_del2;
 
-import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -11,8 +10,6 @@ class Teacher {
     private String name;
     private List<Seminar> seminarHistory = new LinkedList<>();
     private Seminar currentSeminar;
-  
-    
 
     public Teacher(String name) {
         this.name = name;
@@ -45,5 +42,4 @@ class Teacher {
     public Seminar getCurrentSeminar() {
         return currentSeminar;
     }
-    
 }
